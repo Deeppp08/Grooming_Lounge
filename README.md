@@ -71,7 +71,7 @@ Below are previews of the Apex Grooming Lounge website showcasing the homepage a
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/Apex-Grooming-Lounge.git
+git clone https://github.com/Deeppp08/Grooming_Lounge.git
 ```
 
 2. Open the project folder:
