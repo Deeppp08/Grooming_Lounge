@@ -61,10 +61,10 @@ The goal of this project is to create a professional and visually appealing webs
 Add screenshots of your project here.
 
 ### Home Page
-![Home Page](screenshots/homepage.png)
+![Home Page](./screenshots/homepage.png)
 
 ### Services Section
-![Services](screenshots/services.png)
+![Services](./screenshots/services.png)
 
 ## 🔧 Installation
 
