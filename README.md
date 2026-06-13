@@ -4,7 +4,7 @@ A premium men's grooming and salon website designed to deliver a modern, luxurio
 
 ## 🚀 Live Demo
 
-Add your deployed website link here:
+deployed website link later:
 
 ```text
 https://your-demo-link.com
@@ -58,7 +58,7 @@ The goal of this project is to create a professional and visually appealing webs
 
 ## 📸 Screenshots
 
-Add screenshots of your project here.
+Below are previews of the Apex Grooming Lounge website showcasing the homepage and services section.
 
 ### Home Page
 <img src="https://github.com/Deeppp08/Grooming_Lounge/blob/main/screenshorts/homepage.png?raw=true">
