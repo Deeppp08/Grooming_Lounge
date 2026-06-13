@@ -4,10 +4,10 @@ A premium men's grooming and salon website designed to deliver a modern, luxurio
 
 ## 🚀 Live Demo
 
-deployed website link later:
+deployed website link :
 
 ```text
-https://your-demo-link.com
+https://your-demo-link.com](https://deeppp08.github.io/Grooming_Lounge/
 ```
 
 ## 📌 Features
