@@ -61,10 +61,10 @@ The goal of this project is to create a professional and visually appealing webs
 Add screenshots of your project here.
 
 ### Home Page
-![Home Page](./screenshots/homepage.png)
+<img src="https://github.com/Deeppp08/Grooming_Lounge/blob/main/screenshorts/homepage.png?raw=true">
 
 ### Services Section
-![Services](./screenshots/services.png)
+<img src="https://github.com/Deeppp08/Grooming_Lounge/blob/main/screenshorts/services.png?raw=true">
 
 ## 🔧 Installation
 
