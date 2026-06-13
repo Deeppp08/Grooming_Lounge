@@ -102,8 +102,8 @@ Contributions, suggestions, and improvements are welcome.
 
 ### Connect with Me
 
-- GitHub: https://github.com/yourusername
-- LinkedIn: https://linkedin.com/in/yourprofile
+- GitHub: https://github.com/deeppp08
+- LinkedIn: https://linkedin.com/in/deep-pal08
 
 ## ⭐ Support
 
