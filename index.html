@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Grooming Lounge | Premium Male Salon & Spa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- FontAwesome Icons for premium details -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Barcode Font for Receipt Design -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Top Promotion Bar -->
+  <div class="offer-bar">
+    <i class="fa-solid fa-crown"></i> APEX SIGNATURE EXPERIENCE • COMPLIMENTARY LOUNGE BAR WITH EVERY SERVICE • APEX SIGNATURE EXPERIENCE <i class="fa-solid fa-crown"></i>
+  </div>
+
+  <!-- Sticky Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo-section">
+      <div class="logo-icon">
+        <i class="fa-solid fa-shield-halved" style="color: var(--accent-gold); font-size: 1.8rem;"></i>
+      </div>
+      <div class="logo-text">
+        APEX<br><span>GROOMING LOUNGE</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">The Experience</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-book-btn" onclick="openBookingDrawer()">
+      <i class="fa-solid fa-calendar-check"></i> Book Now <span id="cart-badge" style="display:none; background:#ffffff; color:#000; border-radius:50%; padding: 2px 6px; font-size:0.75rem; margin-left:5px;">0</span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-gem"></i> Elite Grooming for Men
+      </div>
+      <h1>CRAFTING THE<br><span>MODERN GENTLEMAN</span></h1>
+      <p>Apex Grooming Lounge is an upscale sanctuary designed exclusively for men. We combine time-honored barbering traditions with modern styling techniques to deliver an unparalleled grooming experience.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="scrollToSection('services')">Explore Services</button>
+        <button class="btn-secondary" onclick="openBookingDrawer()">Book Appointment</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="section-header">
+      <span class="section-badge">Our Craft</span>
+      <h2 class="section-title">PREMIUM LOUNGE SERVICES</h2>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="category-tabs">
+      <button class="tab-btn active" onclick="filterServices('all', this)">All Offerings</button>
+      <button class="tab-btn" onclick="filterServices('hair', this)">Hair & Styling</button>
+      <button class="tab-btn" onclick="filterServices('beard', this)">Beard & Shave</button>
+      <button class="tab-btn" onclick="filterServices('skin', this)">Skin & Facials</button>
+      <button class="tab-btn" onclick="filterServices('spa', this)">Spa & Therapy</button>
+    </div>
+
+    <!-- Services Grid (Populated dynamically) -->
+    <div class="services-grid" id="services-container">
+      <!-- JavaScript will inject cards here -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="hair_cut_service.png" alt="Apex Barber styling hair" />
+      </div>
+      <div class="about-text">
+        <div class="section-header" style="text-align: left; margin-bottom: 25px;">
+          <span class="section-badge" style="margin-left: 0;">Our Philosophy</span>
+          <h2 class="section-title">THE APEX EXPERIENCE</h2>
+        </div>
+        <p>At Apex, grooming is more than a routine—it's an art. Every treatment is designed to leave you looking sharp, feeling relaxed, and moving with confidence. From the moment you walk through our doors, you receive dedicated personalized attention from the region's finest barbers.</p>
+        
+        <div class="about-features">
+          <div class="feature-box">
+            <i class="fa-solid fa-scissors feature-icon"></i>
+            <h4>Master Barbers</h4>
+            <p>Our artisans specialize in classic cuts and modern beard line designs.</p>
+          </div>
+          <div class="feature-box">
+            <i class="fa-solid fa-bottle-droplet feature-icon"></i>
+            <h4>Premium Products</h4>
+            <p>We use premium, organic pomades, facial scrubs, and hydrating oils.</p>
+          </div>
+          <div class="feature-box">
+            <i class="fa-solid fa-mug-hot feature-icon"></i>
+            <h4>Complimentary Bar</h4>
+            <p>Enjoy premium coffee, mocktails, or beverages during your session.</p>
+          </div>
+          <div class="feature-box">
+            <i class="fa-solid fa-temperature-arrow-up feature-icon"></i>
+            <h4>Hot Towel Therapy</h4>
+            <p>Signature warm aromatherapy towels included in every shave package.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="section-header">
+      <span class="section-badge">Testimonials</span>
+      <h2 class="section-title">GENTLEMEN REVIEWS</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="rating-stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-content">"The best haircut and beard trim I've ever had. Barber Marcus is an absolute perfectionist. The complementary espresso was top notch too. Worth every penny."</p>
+        <div class="reviewer-profile">
+          <div class="reviewer-info">
+            <h4>Ethan Vance</h4>
+            <span>Executive Client</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="rating-stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-content">"The Charcoal Detox Facial did wonders. The staff was incredibly welcoming, the glassmorphic aesthetics are super modern, and the overall vibe is pure luxury."</p>
+        <div class="reviewer-profile">
+          <div class="reviewer-info">
+            <h4>Arjun Mehta</h4>
+            <span>Creative Director</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="rating-stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-content">"Apex signature hot towel shaving is therapeutic. Very professional barber staff, booking is extremely seamless, and the styling lounge is top tier."</p>
+        <div class="reviewer-profile">
+          <div class="reviewer-info">
+            <h4>Liam Sterling</h4>
+            <span>Architect</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Map Section -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-badge">Visit Us</span>
+      <h2 class="section-title">THE LOUNGE LOCATIONS</h2>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-card">
+        <h3>APEX HEADQUARTERS</h3>
+        <ul class="contact-info-list">
+          <li class="contact-info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Location</h4>
+              <p>7th Avenue Luxury Arcade, Suite 402, Mumbai, India</p>
+            </div>
+          </li>
+          <li class="contact-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Reservations & Inquiries</h4>
+              <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+            </div>
+          </li>
+          <li class="contact-info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h4>Email Support</h4>
+              <p><a href="mailto:concierge@apexbarberlounge.com">concierge@apexbarberlounge.com</a></p>
+            </div>
+          </li>
+          <li class="contact-info-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <h4>Operational Hours</h4>
+              <p>Mon - Fri: 10:00 AM - 9:00 PM<br>Sat - Sun: 09:00 AM - 10:00 PM</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Custom styled Mock Map -->
+      <div class="map-mockup">
+        <div class="map-grid-overlay"></div>
+        <div class="map-marker">
+          <i class="fa-solid fa-location-dot"></i>
+          <div class="map-marker-pulse"></div>
+        </div>
+        <div style="position: absolute; bottom: 20px; z-index: 2; width: 100%;">
+          <h4 style="font-family: var(--font-header); letter-spacing: 2px; color: #ffffff; margin-bottom: 5px;">APEX LOUNGE MAPPED</h4>
+          <p style="font-size: 0.8rem; color: var(--accent-gold);">Ritz-Carlton Business District Entrance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- BOOKING SIDEBAR DRAWER --- -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="closeBookingDrawer()"></div>
+  
+  <div class="booking-drawer" id="booking-drawer">
+    <div class="drawer-header">
+      <h3>Your Booking Cart</h3>
+      <button class="btn-close-drawer" onclick="closeBookingDrawer()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    
+    <div class="drawer-content">
+      <!-- Section 1: Selected Services -->
+      <div class="drawer-section">
+        <h4>Selected Services</h4>
+        <ul class="booking-cart-list" id="cart-items-container">
+          <!-- Dynamically populated -->
+        </ul>
+        <div id="empty-cart-msg" class="cart-empty-state">
+          <i class="fa-solid fa-scissors" style="font-size: 2rem; margin-bottom:10px; display:block; color:var(--text-muted);"></i>
+          No services selected yet. Add services from the cards below to schedule.
+        </div>
+      </div>
+
+      <!-- Section 2: Personal Details -->
+      <div class="drawer-section">
+        <h4>Client Details</h4>
+        <div style="margin-bottom: 12px;">
+          <input type="text" id="client-name" class="booking-input" placeholder="Your Full Name" required />
+        </div>
+        <div>
+          <input type="tel" id="client-phone" class="booking-input" placeholder="Phone Number (+91...)" required />
+        </div>
+      </div>
+
+      <!-- Section 3: Select Stylist -->
+      <div class="drawer-section">
+        <h4>Select Barber</h4>
+        <select id="barber-select" class="booking-input">
+          <option value="Barber Marcus (Senior Master Barber)">Barber Marcus (Senior Master Barber)</option>
+          <option value="Barber Jack (Creative Beard Artist)">Barber Jack (Creative Beard Artist)</option>
+          <option value="Barber Leo (Skin Specialist)">Barber Leo (Skin Specialist)</option>
+          <option value="Any Available Artisan" selected>Any Available Artisan</option>
+        </select>
+      </div>
+
+      <!-- Section 4: Select Date -->
+      <div class="drawer-section">
+        <h4>Preferred Date</h4>
+        <input type="date" id="booking-date" class="booking-input" />
+      </div>
+
+      <!-- Section 5: Select Time Slot -->
+      <div class="drawer-section">
+        <h4>Available Slots</h4>
+        <div class="time-slots-grid" id="time-slots-container">
+          <div class="time-slot" onclick="selectTimeSlot(this, '09:30 AM')">09:30 AM</div>
+          <div class="time-slot" onclick="selectTimeSlot(this, '11:00 AM')">11:00 AM</div>
+          <div class="time-slot" onclick="selectTimeSlot(this, '12:30 PM')">12:30 PM</div>
+          <div class="time-slot" onclick="selectTimeSlot(this, '02:00 PM')">02:00 PM</div>
+          <div class="time-slot" onclick="selectTimeSlot(this, '03:30 PM')">03:30 PM</div>
+          <div class="time-slot" onclick="selectTimeSlot(this, '05:00 PM')">05:00 PM</div>
+          <div class="time-slot" onclick="selectTimeSlot(this, '06:30 PM')">06:30 PM</div>
+          <div class="time-slot" onclick="selectTimeSlot(this, '08:00 PM')">08:00 PM</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drawer Footer Summary -->
+    <div class="drawer-footer">
+      <div class="price-summary">
+        <span>Total Estimated</span>
+        <strong id="cart-total-price">$0</strong>
+      </div>
+      <button class="btn-checkout" id="checkout-btn" onclick="submitBooking()" disabled>
+        Confirm Reservation
+      </button>
+    </div>
+  </div>
+
+  <!-- --- BOOKING RECEIPT CONFIRMATION MODAL --- -->
+  <div class="modal-overlay" id="receipt-modal-overlay">
+    <div class="receipt-modal">
+      <div class="success-badge">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h2>RESERVATION CONFIRMED</h2>
+      <p>Your premium groom styling chair has been reserved.</p>
+
+      <div class="receipt-details-box">
+        <div style="text-align: center; border-bottom: 1px dashed var(--gold-border); padding-bottom:12px; margin-bottom:12px;">
+          <h4 style="font-family: var(--font-header); font-size:1.1rem; color:#ffffff; letter-spacing:1px;">APEX LOUNGE INVOICE</h4>
+          <span style="font-size:0.75rem; color:var(--text-muted);">TICKET ID: <span id="receipt-ticket-id" class="gold">APX-00000</span></span>
+        </div>
+        
+        <div class="receipt-line">
+          <span class="receipt-label">Guest Client:</span>
+          <span class="receipt-value" id="receipt-client-name">John Doe</span>
+        </div>
+        <div class="receipt-line">
+          <span class="receipt-label">Phone Reference:</span>
+          <span class="receipt-value" id="receipt-client-phone">+91 XXXXX XXXXX</span>
+        </div>
+        <div class="receipt-line">
+          <span class="receipt-label">Barber Artist:</span>
+          <span class="receipt-value" id="receipt-barber-name">Barber Marcus</span>
+        </div>
+        <div class="receipt-line">
+          <span class="receipt-label">Date & Time:</span>
+          <span class="receipt-value" id="receipt-date-time">June 20, 03:30 PM</span>
+        </div>
+        <div class="receipt-line" style="border-top: 1px solid var(--glass-border); padding-top: 10px; margin-top: 10px;">
+          <span class="receipt-label">Booked Services:</span>
+          <span class="receipt-value" id="receipt-services-list" style="text-align: right; max-width: 220px; font-size:0.8rem; display:block;">Haircut, Beard Trim</span>
+        </div>
+        
+        <div class="receipt-line" style="margin-top: 15px;">
+          <span class="receipt-label" style="font-weight: 700; color: #ffffff;">TOTAL CHARGES:</span>
+          <span class="receipt-value gold" id="receipt-total-charge">$0.00</span>
+        </div>
+
+        <!-- Working visual barcode -->
+        <div class="receipt-barcode">
+          *APX889025*
+        </div>
+      </div>
+
+      <p class="receipt-footer-msg">Please arrive 10 minutes prior to your appointment time. Complimentary refreshments will be served at the lounge counter.</p>
+      <button class="btn-close-modal" onclick="closeReceiptModal()">Close Receipt</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Code Section -->
+  <script>
+    // Services Database
+    const servicesData = [
+      {
+        id: 's1',
+        title: 'Classic Shear Cut & Style',
+        category: 'hair',
+        price: 35,
+        duration: '45 mins',
+        image: 'hair_cut_service.png',
+        description: 'Tailored haircut including a precision shampoo wash, scalp massage, and expert styling with premium pomade.'
+      },
+      {
+        id: 's2',
+        title: 'Royal Beard Sculpting',
+        category: 'beard',
+        price: 25,
+        duration: '30 mins',
+        image: 'beard_trim_service.png',
+        description: 'Detailed beard shaping using clippers and shears, finished with a straight razor neck cleanup and soothing cedar wood oils.'
+      },
+      {
+        id: 's3',
+        title: 'Charcoal Detox Facial',
+        category: 'skin',
+        price: 45,
+        duration: '40 mins',
+        image: 'facial_skincare_service.png',
+        description: 'Deep pore charcoal extraction, steam therapy, premium scrub, and a cooling clay mask for complete skin revitalization.'
+      },
+      {
+        id: 's4',
+        title: 'Stress Relief Scalp Massage',
+        category: 'spa',
+        price: 30,
+        duration: '30 mins',
+        image: 'massage_spa_service.png',
+        description: 'Relaxing head, neck, and shoulder massage using organic essential oils to release daily stress and tension.'
+      },
+      {
+        id: 's5',
+        title: 'Precision Groom Hair Color',
+        category: 'hair',
+        price: 60,
+        duration: '60 mins',
+        image: 'hair_color_service.png',
+        description: 'Premium gray coverage or customized highlights designed specifically for male hair textures, utilizing Ammonia-free dyes.'
+      },
+      {
+        id: 's6',
+        title: 'Advanced De-tan Therapy',
+        category: 'skin',
+        price: 40,
+        duration: '45 mins',
+        image: 'detan_treatment.png',
+        description: 'Intense de-tan therapy targeting sun damage, paired with a volcanic ash face scrub for a bright, refined look.'
+      },
+      {
+        id: 's7',
+        title: 'The Apex Signature Groom',
+        category: 'spa',
+        price: 85,
+        duration: '90 mins',
+        image: 'hero_male_grooming.png',
+        description: 'Our ultimate luxury combination: includes the Classic Shear Cut, Royal Beard Sculpt, and Charcoal Detox Facial.'
+      }
+    ];
+
+    // State Variables
+    let selectedServices = [];
+    let selectedTime = '';
+    
+    // Set default date to tomorrow
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    document.getElementById('booking-date').value = tomorrow.toISOString().substring(0, 10);
+    document.getElementById('booking-date').min = new Date().toISOString().substring(0, 10);
+
+    // Initial render
+    window.addEventListener('DOMContentLoaded', () => {
+      renderServices('all');
+      updateCartUI();
+    });
+
+    // Scroll Helper
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Render Services Cards
+    function renderServices(categoryFilter) {
+      const container = document.getElementById('services-container');
+      container.innerHTML = '';
+      
+      const filtered = categoryFilter === 'all' 
+        ? servicesData 
+        : servicesData.filter(s => s.category === categoryFilter);
+
+      filtered.forEach(service => {
+        const isAdded = selectedServices.some(s => s.id === service.id);
+        const btnText = isAdded ? 'Added to Cart' : 'Add to Booking';
+        const btnClass = isAdded ? 'btn-card-action active' : 'btn-card-action';
+        const buttonStyles = isAdded ? 'background: var(--accent-gold); color: #000; border-color: var(--accent-gold);' : '';
+
+        const card = document.createElement('div');
+        card.className = 'service-card';
+        card.innerHTML = `
+          <div class="service-img-wrapper">
+            <img src="${service.image}" alt="${service.title}">
+            <div class="service-price-tag">$${service.price}</div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-meta">
+              <span><i class="fa-regular fa-clock"></i> ${service.duration}</span>
+              <span>•</span>
+              <span>${service.category}</span>
+            </div>
+            <h3>${service.title}</h3>
+            <p>${service.description}</p>
+            <div class="service-card-footer">
+              <button class="${btnClass}" style="${buttonStyles}" onclick="toggleServiceInCart('${service.id}', this)">
+                ${btnText}
+              </button>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Filter services tabs
+    function filterServices(category, tabElement) {
+      // Remove active class from all tabs
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      // Add active to current
+      tabElement.classList.add('active');
+      
+      renderServices(category);
+    }
+
+    // Add/Remove from booking cart
+    function toggleServiceInCart(id, buttonElement) {
+      const service = servicesData.find(s => s.id === id);
+      const index = selectedServices.findIndex(s => s.id === id);
+
+      if (index === -1) {
+        // Add
+        selectedServices.push(service);
+        if (buttonElement) {
+          buttonElement.innerText = 'Added to Cart';
+          buttonElement.style.background = 'var(--accent-gold)';
+          buttonElement.style.color = '#000';
+          buttonElement.style.borderColor = 'var(--accent-gold)';
+        }
+      } else {
+        // Remove
+        selectedServices.splice(index, 1);
+        if (buttonElement) {
+          buttonElement.innerText = 'Add to Booking';
+          buttonElement.style.background = 'transparent';
+          buttonElement.style.color = 'var(--accent-gold)';
+          buttonElement.style.borderColor = 'var(--gold-border)';
+        }
+      }
+
+      updateCartUI();
+      // Re-render the cards to keep the states fully synchronized
+      const activeTab = document.querySelector('.tab-btn.active');
+      const activeCategory = activeTab.innerText.toLowerCase().includes('all') ? 'all' 
+        : activeTab.innerText.toLowerCase().includes('hair') ? 'hair'
+        : activeTab.innerText.toLowerCase().includes('beard') ? 'beard'
+        : activeTab.innerText.toLowerCase().includes('skin') ? 'skin' : 'spa';
+      renderServices(activeCategory);
+    }
+
+    // Update Sidebar Booking UI
+    function updateCartUI() {
+      const badge = document.getElementById('cart-badge');
+      const cartContainer = document.getElementById('cart-items-container');
+      const emptyMsg = document.getElementById('empty-cart-msg');
+      const totalDisplay = document.getElementById('cart-total-price');
+      const checkoutBtn = document.getElementById('checkout-btn');
+
+      // Update badge count
+      if (selectedServices.length > 0) {
+        badge.innerText = selectedServices.length;
+        badge.style.display = 'inline-block';
+        emptyMsg.style.display = 'none';
+        checkoutBtn.removeAttribute('disabled');
+      } else {
+        badge.style.display = 'none';
+        emptyMsg.style.display = 'block';
+        checkoutBtn.setAttribute('disabled', 'true');
+      }
+
+      // Populate list
+      cartContainer.innerHTML = '';
+      let total = 0;
+      
+      selectedServices.forEach(item => {
+        total += item.price;
+        const li = document.createElement('li');
+        li.className = 'cart-item';
+        li.innerHTML = `
+          <div class="cart-item-info">
+            <h5>${item.title}</h5>
+            <span><i class="fa-regular fa-clock"></i> ${item.duration}</span>
+          </div>
+          <div class="cart-item-right">
+            <span class="cart-item-price">$${item.price}</span>
+            <button class="btn-remove-item" onclick="toggleServiceInCart('${item.id}', null)">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+        `;
+        cartContainer.appendChild(li);
+      });
+
+      totalDisplay.innerText = `$${total}`;
+    }
+
+    // Drawer Open/Close
+    function openBookingDrawer() {
+      document.getElementById('booking-drawer').classList.add('open');
+      document.getElementById('drawer-overlay').classList.add('active');
+    }
+
+    function closeBookingDrawer() {
+      document.getElementById('booking-drawer').classList.remove('open');
+      document.getElementById('drawer-overlay').classList.remove('active');
+    }
+
+    // Select Time Slot
+    function selectTimeSlot(slotElement, time) {
+      document.querySelectorAll('.time-slot').forEach(slot => slot.classList.remove('selected'));
+      slotElement.classList.add('selected');
+      selectedTime = time;
+    }
+
+    // Submit Booking & Print Receipt
+    function submitBooking() {
+      const name = document.getElementById('client-name').value.trim();
+      const phone = document.getElementById('client-phone').value.trim();
+      const barber = document.getElementById('barber-select').value;
+      const date = document.getElementById('booking-date').value;
+
+      if (!name || !phone) {
+        alert('Please provide your name and phone number to complete the reservation.');
+        return;
+      }
+      if (!selectedTime) {
+        alert('Please select an available booking time slot.');
+        return;
+      }
+
+      // Calculate receipt values
+      const totalCharge = selectedServices.reduce((sum, item) => sum + item.price, 0);
+      const servicesListStr = selectedServices.map(item => item.title).join(', ');
+      const randomTicketNum = Math.floor(10000 + Math.random() * 90000);
+      const ticketId = `APX-${randomTicketNum}-${date.substring(2, 4)}`;
+
+      // Populate Receipt Modal
+      document.getElementById('receipt-ticket-id').innerText = ticketId;
+      document.getElementById('receipt-client-name').innerText = name;
+      document.getElementById('receipt-client-phone').innerText = phone;
+      document.getElementById('receipt-barber-name').innerText = barber;
+      
+      // Format Date
+      const dateObj = new Date(date);
+      const formattedDate = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      document.getElementById('receipt-date-time').innerText = `${formattedDate} at ${selectedTime}`;
+      
+      document.getElementById('receipt-services-list').innerText = servicesListStr;
+      document.getElementById('receipt-total-charge').innerText = `$${totalCharge}.00`;
+      
+      // Update receipt visual barcode text
+      document.querySelector('.receipt-barcode').innerText = `*${ticketId.replace(/-/g, '')}*`;
+
+      // Clear Cart state
+      selectedServices = [];
+      selectedTime = '';
+      document.querySelectorAll('.time-slot').forEach(slot => slot.classList.remove('selected'));
+      document.getElementById('client-name').value = '';
+      document.getElementById('client-phone').value = '';
+      updateCartUI();
+
+      // Close Drawer & Open Receipt Modal
+      closeBookingDrawer();
+      openReceiptModal();
+    }
+
+    // Receipt Modal controls
+    function openReceiptModal() {
+      document.getElementById('receipt-modal-overlay').classList.add('active');
+    }
+
+    function closeReceiptModal() {
+      document.getElementById('receipt-modal-overlay').classList.remove('active');
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
